@@ -18,23 +18,27 @@
   ];
 </script>
 
-<section class="py-24 px-6 md:px-12 bg-white">
-  <div class="max-w-xl mb-16">
-    <h3 class="text-lg font-bold mb-2">Technology-enabled, relationship-focused.</h3>
-    <p class="text-gray-500 text-sm leading-relaxed">
-      We combine cutting-edge digital tools with personal service. Our approach balances data-driven insights with human expertise, ensuring every property receives the strategic attention it deserves while maintaining operational efficiency at scale.
-    </p>
-  </div>
+<section class="py-32 px-6 md:px-16 lg:px-24 bg-white">
+  <div class="max-w-7xl mx-auto">
+    <div class="max-w-3xl mb-24">
+      <h2 class="text-4xl md:text-6xl font-medium leading-tight mb-8">
+        Technology-enabled, relationship-focused
+      </h2>
+      <p class="text-xl text-gray-500 leading-relaxed">
+        We combine cutting-edge digital tools with personal service. Our approach balances data-driven insights with human expertise, ensuring every property receives the strategic attention it deserves while maintaining operational efficiency at scale.
+      </p>
+    </div>
 
-  <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-    {#each photos as photo}
-      <div>
-        <div class="aspect-[3/4] rounded-lg overflow-hidden mb-4 bg-gray-100">
-          <img src={photo.img} alt={photo.title} class="w-full h-full object-cover" />
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      {#each photos as photo}
+        <div class="group cursor-pointer">
+          <div class="aspect-[3/4] overflow-hidden mb-6 bg-gray-100">
+            <img src={photo.img} alt={photo.title} class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" />
+          </div>
+          <h4 class="text-sm uppercase tracking-wider text-gray-400 mb-2">{photo.title}</h4>
+          <p class="text-sm text-gray-600 leading-relaxed">{photo.desc}</p>
         </div>
-        <h4 class="text-xs font-bold mb-1">{photo.title}</h4>
-        <p class="text-[10px] text-gray-500 leading-relaxed">{photo.desc}</p>
-      </div>
-    {/each}
+      {/each}
+    </div>
   </div>
 </section>

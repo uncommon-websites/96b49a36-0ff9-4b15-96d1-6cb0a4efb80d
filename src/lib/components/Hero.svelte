@@ -7,21 +7,22 @@
   ];
 </script>
 
-<section class="relative min-h-screen flex flex-col justify-end pb-20 px-6 md:px-12 bg-gradient-to-b from-gray-900 via-gray-700 to-white text-[#1a1a1a]">
-  <!-- Gradient overlay/background handling -->
-  <div class="absolute inset-0 z-[-1] bg-[linear-gradient(180deg,#0a0a0a_0%,#2a2a2a_30%,#6a6a6a_60%,#fff_100%)]"></div>
-
-  <div class="max-w-4xl mb-32 pt-40">
-    <h1 class="text-3xl md:text-5xl font-medium leading-[1.15] tracking-tight">
-      Transforming underperforming property assets into high-value investments. <span class="text-gray-500">Through data-led stewardship and strategic repositioning, we deliver consistent returns for property investors across Greater London and Southeast England.</span>
+<section class="relative min-h-screen flex flex-col justify-center px-6 md:px-16 lg:px-24 bg-white">
+  <div class="max-w-7xl mx-auto w-full py-32">
+    <h1 class="text-5xl md:text-7xl lg:text-8xl font-medium leading-[1.1] tracking-tight mb-12">
+      Transforming underperforming property assets into high-value investments
     </h1>
+    
+    <p class="text-xl md:text-2xl text-gray-500 max-w-3xl leading-relaxed">
+      Through data-led stewardship and strategic repositioning, we deliver consistent returns for property investors across Greater London and Southeast England.
+    </p>
   </div>
 
-  <div class="border-t border-gray-300 pt-8 flex flex-wrap gap-8 md:gap-16 items-center opacity-60">
-    <div class="text-xs uppercase tracking-wide text-gray-600 font-medium">Trusted by property investors</div>
+  <div class="absolute bottom-12 left-6 md:left-16 lg:left-24 right-6 md:right-16 lg:right-24 border-t border-gray-200 pt-6 flex flex-wrap gap-6 md:gap-12 items-center text-xs uppercase tracking-wider text-gray-400">
+    <div>Trusted by property investors</div>
     {#each partners as partner}
-      <div class="h-8 flex items-center justify-center font-semibold text-sm text-gray-700">{partner}</div>
+      <div class="font-medium text-gray-600">{partner}</div>
     {/each}
-    <div class="h-8 flex items-center justify-center text-sm text-gray-600">2,000+ Assets Under Management</div>
+    <div class="ml-auto text-gray-600">2,000+ Assets Under Management</div>
   </div>
 </section>

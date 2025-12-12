@@ -18,27 +18,27 @@
   ];
 </script>
 
-<section class="py-24 px-6 md:px-12 bg-white">
-  <div class="max-w-2xl mb-16">
-    <p class="text-xl md:text-2xl leading-relaxed text-gray-800">
-      Our core values guide everything we do. We're not just property managers—we're strategic partners committed to strengthening your assets, enhancing lives, and exceeding expectations through care, clarity, and insight.
-    </p>
-  </div>
+<section class="py-32 px-6 md:px-16 lg:px-24 bg-white">
+  <div class="max-w-7xl mx-auto">
+    <div class="max-w-3xl mb-24">
+      <h2 class="text-4xl md:text-6xl font-medium leading-tight mb-8">
+        Our core values
+      </h2>
+      <p class="text-xl text-gray-500 leading-relaxed">
+        We're not just property managers—we're strategic partners committed to strengthening your assets, enhancing lives, and exceeding expectations through care, clarity, and insight.
+      </p>
+    </div>
 
-  <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-    {#each cards as card}
-      <div class="group">
-        <div class="aspect-[4/3] overflow-hidden rounded-lg mb-4 bg-gray-100">
-          <img src={card.image} alt={card.title} class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" />
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      {#each cards as card}
+        <div class="group cursor-pointer">
+          <div class="aspect-[3/4] overflow-hidden mb-6 bg-gray-100">
+            <img src={card.image} alt={card.title} class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 ease-out group-hover:scale-105" />
+          </div>
+          <h3 class="text-sm uppercase tracking-wider text-gray-400 mb-2">{card.title}</h3>
+          <p class="text-base font-medium">{card.subtitle}</p>
         </div>
-        <h3 class="text-sm text-gray-500 mb-1">{card.title}</h3>
-        <p class="text-sm font-bold">{card.subtitle}</p>
-        
-        <div class="flex justify-between mt-4 text-xs text-gray-400">
-           <span>01</span>
-           <span>-></span>
-        </div>
-      </div>
-    {/each}
+      {/each}
+    </div>
   </div>
 </section>

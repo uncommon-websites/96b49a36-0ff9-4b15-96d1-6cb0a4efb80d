@@ -23,24 +23,29 @@
   ];
 </script>
 
-<section class="py-24 px-6 md:px-12 bg-white border-t border-gray-100">
-  <div class="mb-16">
-    <p class="text-gray-500 max-w-xl">
-      Curious about Woodfell? Here's a snapshot of our scale, expertise, and the standards that drive everything we do.
-    </p>
-  </div>
+<section class="py-32 px-6 md:px-16 lg:px-24 bg-white border-t border-gray-100">
+  <div class="max-w-7xl mx-auto">
+    <div class="mb-24">
+      <h2 class="text-4xl md:text-6xl font-medium leading-tight mb-8">
+        By the numbers
+      </h2>
+      <p class="text-xl text-gray-500 max-w-2xl">
+        A snapshot of our scale, expertise, and the standards that drive everything we do.
+      </p>
+    </div>
 
-  <div class="space-y-16">
-    {#each stats as stat}
-      <div class="flex flex-col md:flex-row md:items-start justify-between gap-8 border-b border-gray-100 pb-16 last:border-0">
-        <h3 class="text-2xl md:text-4xl font-medium w-full md:w-1/3">{stat.label}</h3>
-        <div class="w-full md:w-1/3">
-           <p class="text-xs leading-relaxed text-gray-500">{stat.desc}</p>
+    <div class="space-y-24">
+      {#each stats as stat}
+        <div class="flex flex-col md:flex-row md:items-start justify-between gap-12 border-b border-gray-100 pb-24 last:border-0 last:pb-0">
+          <h3 class="text-3xl md:text-5xl font-medium w-full md:w-2/5 leading-tight">{stat.label}</h3>
+          <div class="w-full md:w-2/5">
+             <p class="text-base leading-relaxed text-gray-600">{stat.desc}</p>
+          </div>
+          <div class="w-full md:w-1/5 flex md:justify-end">
+             <img src={stat.img} alt={stat.label} class="w-24 h-24 object-cover bg-gray-100" />
+          </div>
         </div>
-        <div class="w-full md:w-1/6 flex justify-end">
-           <img src={stat.img} alt={stat.label} class="w-20 h-20 object-cover rounded bg-gray-100" />
-        </div>
-      </div>
-    {/each}
+      {/each}
+    </div>
   </div>
 </section>

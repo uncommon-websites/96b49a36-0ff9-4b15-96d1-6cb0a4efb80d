@@ -53,29 +53,34 @@
   ];
 </script>
 
-<section class="px-6 md:px-12 py-24 bg-white">
-  <div class="max-w-3xl mb-16">
-    <h2 class="text-2xl md:text-3xl font-medium leading-tight">
-      <span class="font-bold">We manage 2,000+ properties across Greater London and Southeast England,</span> transforming underperforming assets into high-value investments through strategic repositioning and data-led stewardship.
-    </h2>
-  </div>
+<section class="px-6 md:px-16 lg:px-24 py-32 bg-white">
+  <div class="max-w-7xl mx-auto">
+    <div class="mb-24">
+      <h2 class="text-4xl md:text-6xl font-medium leading-tight mb-8">
+        Featured properties
+      </h2>
+      <p class="text-xl text-gray-500 max-w-3xl">
+        We manage 2,000+ properties across Greater London and Southeast England, transforming underperforming assets into high-value investments through strategic repositioning and data-led stewardship.
+      </p>
+    </div>
 
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-12">
-    {#each projects as project}
-      <div class="group cursor-pointer {project.full ? 'md:col-span-2' : ''}">
-        <div class={`aspect-[4/3] w-full rounded-lg overflow-hidden relative ${project.bg} mb-4 ${project.full ? 'md:aspect-[2.5/1]' : ''}`}>
-          {#if project.img}
-             <img src={project.img} alt={project.client} class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
-          {:else}
-             <!-- Placeholder for logos on solid bg -->
-             <div class="w-full h-full flex items-center justify-center">
-                <span class={`text-2xl font-bold ${project.dark ? 'text-white' : 'text-black'}`}>{project.client} Logo</span>
-             </div>
-          {/if}
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      {#each projects as project}
+        <div class="group cursor-pointer {project.full ? 'md:col-span-2' : ''}">
+          <div class={`aspect-[4/3] w-full overflow-hidden relative bg-gray-100 mb-6 ${project.full ? 'md:aspect-[2.5/1]' : ''}`}>
+            {#if project.img}
+               <img src={project.img} alt={project.client} class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" />
+            {:else}
+               <!-- Placeholder for logos on solid bg -->
+               <div class="w-full h-full flex items-center justify-center">
+                  <span class={`text-2xl font-bold ${project.dark ? 'text-white' : 'text-black'}`}>{project.client} Logo</span>
+               </div>
+            {/if}
+          </div>
+          <h3 class="text-base font-medium mb-2">{project.client}</h3>
+          <p class="text-sm text-gray-500 leading-relaxed">{project.desc}</p>
         </div>
-        <h3 class="text-sm font-bold mb-1">{project.client}</h3>
-        <p class="text-sm text-gray-600">{project.desc}</p>
-      </div>
-    {/each}
+      {/each}
+    </div>
   </div>
 </section>
