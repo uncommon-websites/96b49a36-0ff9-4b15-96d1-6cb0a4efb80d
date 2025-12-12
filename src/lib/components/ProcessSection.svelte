@@ -4,30 +4,30 @@
   const steps = [
     {
       id: "discover",
-      title: "Discover Novel Opportunities",
-      text: "The right problem is the one worth solving. We quickly uncover actionable opportunities through data and business insights, ensuring that every discovery is grounded in what matters most for your business and your users.",
-      tags: ["Business & Market Research", "Data Driven Insights", "UX Audits", "Customer Journey Mapping", "Brand Perception Analysis", "Technical Assessment"],
+      title: "Analyze Asset Performance",
+      text: "We don't just manage for today—we position assets for the future. Through comprehensive analysis of demographics, housing demand, and market trends, we identify opportunities to maximize value and deliver consistent returns.",
+      tags: ["Market Analysis", "Asset Valuation", "Demographic Research", "Performance Audits", "Tenant Satisfaction Surveys", "Compliance Review"],
       graphic: "lines"
     },
     {
       id: "envision",
-      title: "Envision Innovative Strategies",
-      text: "Great strategies don't just come from ideas—they come from clear, actionable plans. We create pragmatic roadmaps that balance ambition with feasibility, focusing on what will drive immediate and long-term impact for both business and users.",
-      tags: ["CX & Product Strategy", "Vision & Roadmapping", "Value Proposition Design", "Northstar Metric Framework", "Brand Strategy & Positioning", "Technical Solution Design"],
+      title: "Strategic Repositioning",
+      text: "Every underperforming asset has untapped potential. We develop data-led strategies that transform properties into high-value investments, balancing immediate improvements with long-term positioning for sustainable growth.",
+      tags: ["Asset Strategy", "Value Optimization", "Investment Planning", "Sustainability Audits", "Portfolio Analysis", "Risk Management"],
       graphic: "curve"
     },
     {
       id: "build",
-      title: "Build Engaging Touchpoints",
-      text: "We turn strategy into action—fast and efficiently. Whether designing intuitive interfaces, visual identities, or building scalable platforms, we focus on building holistic experiences that are both joyful and effective.",
-      tags: ["UX & UI Design", "Information Architecture", "App & Web Design", "Design Systems", "Content Strategy", "Agile Software Engineering"],
+      title: "Comprehensive Management",
+      text: "From leasing to facilities management, we deliver holistic property stewardship. Our integrated approach covers the full lifecycle, ensuring every aspect of your asset is optimized for performance and tenant satisfaction.",
+      tags: ["Property Management", "Leasing Operations", "Facilities Management", "Maintenance Coordination", "Tenant Relations", "Financial Reporting"],
       graphic: "circle-top"
     },
     {
       id: "elevate",
-      title: "Elevate Delivery Capabilities",
-      text: "We make sure teams can deliver better outcomes, faster. By evolving collaborative workflows, upskilling teams, and implementing the right tools, we help you scale with confidence and consistency.",
-      tags: ["AI Consulting", "QA & Delivery", "Process Optimization", "Performance Analytics", "Continuous Improvement", "Change Management"],
+      title: "Continuous Value Creation",
+      text: "We believe in transparent, proactive management. Through regular reporting, performance monitoring, and strategic improvements, we ensure your assets consistently exceed expectations and deliver peak performance.",
+      tags: ["Performance Monitoring", "Transparent Reporting", "Proactive Maintenance", "Value Enhancement", "Client Communication", "Strategic Planning"],
       graphic: "circle-waves"
     }
   ];
@@ -63,7 +63,7 @@
   });
 </script>
 
-<section class="bg-[#1a1a40] text-white py-24 px-6 md:px-12 relative" bind:this={sectionRef}>
+<section class="bg-gray-950 text-white py-24 px-6 md:px-12 relative" bind:this={sectionRef}>
   <div class="max-w-screen-2xl mx-auto flex flex-col md:flex-row gap-12">
     
     <!-- Sticky Navigation -->

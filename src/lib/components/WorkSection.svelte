@@ -1,53 +1,53 @@
 <script lang="ts">
   const projects = [
     {
-      client: "Red Bull",
-      desc: "A global platform built to Scale, Evolve, and Perform.",
-      bg: "bg-[#000c2d]",
-      img: "", // Placeholder logic handled in template
-      dark: true
+      client: "Zenith House, Hampshire",
+      desc: "Energy-efficient new development near Fleet Pond Nature Reserve with modern rental apartments.",
+      bg: "bg-gray-100",
+      img: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&q=80&w=800",
+      dark: false
     },
     {
-      client: "Volvo",
-      desc: "Redefining how people experience insurance.",
+      client: "Heather Court, South London",
+      desc: "Strategic repositioning of residential block delivering enhanced tenant satisfaction and value.",
       bg: "bg-gray-200",
-      img: "https://images.unsplash.com/photo-1556742049-0cfed4f7a07d?auto=format&fit=crop&q=80&w=800",
+      img: "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&q=80&w=800",
       dark: false
     },
     {
-      client: "The Organics",
-      desc: "Translating a refreshing identity into a bold platform.",
-      bg: "bg-[#8da356]",
-      img: "https://images.unsplash.com/photo-1620916566398-39f1143ab7be?auto=format&fit=crop&q=80&w=800",
+      client: "The Spires, Surrey",
+      desc: "Premium residential management with focus on community living and asset optimization.",
+      bg: "bg-gray-100",
+      img: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&q=80&w=800",
       dark: false
     },
     {
-      client: "Isar Aerospace",
-      desc: "Launching a brand journey into orbit.",
-      bg: "bg-black",
-      img: "",
-      dark: true
+      client: "Pico Wharf, Essex",
+      desc: "Mixed-use development repositioned for long-term value through data-led stewardship.",
+      bg: "bg-gray-200",
+      img: "https://images.unsplash.com/photo-1460317442991-0ec209397118?auto=format&fit=crop&q=80&w=800",
+      dark: false
     },
     {
-      client: "REWE",
-      desc: "Digital Convenience in your Pocket.",
-      bg: "bg-[#f0f0f0]",
-      img: "https://images.unsplash.com/photo-1512428559087-560fa5ce7d87?auto=format&fit=crop&q=80&w=800",
+      client: "Commercial Portfolio, Central London",
+      desc: "Comprehensive asset management across 200+ commercial properties with sustainability focus.",
+      bg: "bg-gray-100",
+      img: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=800",
       dark: false,
-      full: true // Making REWE full width to align last two items
+      full: true
     },
     {
-      client: "Alpha Tauri",
-      desc: "Designing the interface of wearable intelligence.",
-      bg: "bg-[#e0e0e0]",
-      img: "https://images.unsplash.com/photo-1551650975-87deedd944c3?auto=format&fit=crop&q=80&w=800",
+      client: "Sussex Mansions, East Sussex",
+      desc: "Freehold management delivering exceptional community living and consistent returns.",
+      bg: "bg-gray-200",
+      img: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&q=80&w=800",
       dark: false
     },
     {
-      client: "Zalando",
-      desc: "Designing the Zalando E-Commerce Operating System.",
-      bg: "bg-[#d8c5f0]",
-      img: "https://images.unsplash.com/photo-1555421689-49263376da7a?auto=format&fit=crop&q=80&w=800",
+      client: "Bedford Park, South London",
+      desc: "Block management with proactive maintenance and transparent performance reporting.",
+      bg: "bg-gray-100",
+      img: "https://images.unsplash.com/photo-1582407947304-fd86f028f716?auto=format&fit=crop&q=80&w=800",
       dark: false
     }
   ];
@@ -56,7 +56,7 @@
 <section class="px-6 md:px-12 py-24 bg-white">
   <div class="max-w-3xl mb-16">
     <h2 class="text-2xl md:text-3xl font-medium leading-tight">
-      <span class="font-bold">We orchestrate strategy, design, and technology</span> to create digital experiences that connect with millions and give you the edge that sets you apart.
+      <span class="font-bold">We manage 2,000+ properties across Greater London and Southeast England,</span> transforming underperforming assets into high-value investments through strategic repositioning and data-led stewardship.
     </h2>
   </div>
 
