@@ -1,4 +1,6 @@
 <script lang="ts">
+  import { scrollFade } from '$lib/actions/scrollFade';
+
   const projects = [
     {
       client: "Zenith House, Hampshire",
@@ -56,17 +58,26 @@
 <section class="px-6 md:px-16 lg:px-24 py-32 bg-white">
   <div class="max-w-7xl mx-auto">
     <div class="mb-24">
-      <h2 class="text-4xl md:text-6xl font-medium leading-tight mb-8">
+      <h2 
+        use:scrollFade={{ delay: 0, duration: 800 }}
+        class="text-4xl md:text-6xl font-medium leading-tight mb-8"
+      >
         Featured properties
       </h2>
-      <p class="text-xl text-gray-500 max-w-3xl">
+      <p 
+        use:scrollFade={{ delay: 100, duration: 800 }}
+        class="text-xl text-gray-500 max-w-3xl"
+      >
         We manage 2,000+ properties across Greater London and Southeast England, transforming underperforming assets into high-value investments through strategic repositioning and data-led stewardship.
       </p>
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-      {#each projects as project}
-        <div class="group cursor-pointer {project.full ? 'md:col-span-2' : ''}">
+      {#each projects as project, i}
+        <div 
+          use:scrollFade={{ delay: i * 100, duration: 800 }}
+          class="group cursor-pointer {project.full ? 'md:col-span-2' : ''}"
+        >
           <div class={`aspect-[4/3] w-full overflow-hidden relative bg-gray-100 mb-6 ${project.full ? 'md:aspect-[2.5/1]' : ''}`}>
             {#if project.img}
                <img src={project.img} alt={project.client} class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" />

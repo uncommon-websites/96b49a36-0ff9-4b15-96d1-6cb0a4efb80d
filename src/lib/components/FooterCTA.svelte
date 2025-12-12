@@ -1,13 +1,30 @@
+<script lang="ts">
+  import { scrollFade } from '$lib/actions/scrollFade';
+</script>
+
 <section class="px-6 md:px-16 lg:px-24 pb-32 bg-white">
   <div class="max-w-7xl mx-auto">
     <div class="overflow-hidden relative bg-black text-white p-12 md:p-20 min-h-[600px] flex flex-col justify-between">
       
       <div class="mb-16">
-        <h2 class="text-4xl md:text-6xl font-medium leading-tight mb-4">Have underperforming assets?</h2>
-        <h2 class="text-4xl md:text-6xl font-medium leading-tight text-gray-400">Let's discuss your portfolio strategy.</h2>
+        <h2 
+          use:scrollFade={{ delay: 0, duration: 800 }}
+          class="text-4xl md:text-6xl font-medium leading-tight mb-4"
+        >
+          Have underperforming assets?
+        </h2>
+        <h2 
+          use:scrollFade={{ delay: 150, duration: 800 }}
+          class="text-4xl md:text-6xl font-medium leading-tight text-gray-400"
+        >
+          Let's discuss your portfolio strategy.
+        </h2>
       </div>
 
-      <div class="bg-white text-black p-8 md:p-12 max-w-2xl self-end w-full flex flex-col md:flex-row items-start md:items-center gap-8">
+      <div 
+        use:scrollFade={{ delay: 300, duration: 800 }}
+        class="bg-white text-black p-8 md:p-12 max-w-2xl self-end w-full flex flex-col md:flex-row items-start md:items-center gap-8"
+      >
         <div class="w-32 h-32 overflow-hidden bg-gray-100 shrink-0">
           <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=200" alt="David Herskovic" class="w-full h-full object-cover" />
         </div>

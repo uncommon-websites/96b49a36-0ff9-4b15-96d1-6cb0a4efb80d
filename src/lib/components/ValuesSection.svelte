@@ -1,4 +1,6 @@
 <script lang="ts">
+  import { scrollFade } from '$lib/actions/scrollFade';
+
   const photos = [
     {
       title: "Digital Infrastructure",
@@ -21,17 +23,26 @@
 <section class="py-32 px-6 md:px-16 lg:px-24 bg-white">
   <div class="max-w-7xl mx-auto">
     <div class="max-w-3xl mb-24">
-      <h2 class="text-4xl md:text-6xl font-medium leading-tight mb-8">
+      <h2 
+        use:scrollFade={{ delay: 0, duration: 800 }}
+        class="text-4xl md:text-6xl font-medium leading-tight mb-8"
+      >
         Technology-enabled, relationship-focused
       </h2>
-      <p class="text-xl text-gray-500 leading-relaxed">
+      <p 
+        use:scrollFade={{ delay: 100, duration: 800 }}
+        class="text-xl text-gray-500 leading-relaxed"
+      >
         We combine cutting-edge digital tools with personal service. Our approach balances data-driven insights with human expertise, ensuring every property receives the strategic attention it deserves while maintaining operational efficiency at scale.
       </p>
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-      {#each photos as photo}
-        <div class="group cursor-pointer">
+      {#each photos as photo, i}
+        <div 
+          use:scrollFade={{ delay: i * 150, duration: 800 }}
+          class="group cursor-pointer"
+        >
           <div class="aspect-[3/4] overflow-hidden mb-6 bg-gray-100">
             <img src={photo.img} alt={photo.title} class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" />
           </div>

@@ -1,5 +1,6 @@
 <script lang="ts">
   import { onMount } from 'svelte';
+  import { scrollFade } from '$lib/actions/scrollFade';
 
   const steps = [
     {
@@ -81,7 +82,11 @@
     <!-- Scrollable Cards -->
     <div class="md:w-1/2 space-y-32 pt-12 md:pt-0">
       {#each steps as step, i}
-        <div class="bg-white text-black p-12 md:p-16 min-h-[600px] flex flex-col justify-between scroll-mt-32" id={step.id}>
+        <div 
+          use:scrollFade={{ delay: 0, duration: 800 }}
+          class="bg-white text-black p-12 md:p-16 min-h-[600px] flex flex-col justify-between scroll-mt-32" 
+          id={step.id}
+        >
           <!-- Graphic Placeholder -->
           <div class="flex-1 flex items-center justify-center mb-12 bg-gray-50 min-h-[240px]">
              {#if step.graphic === 'lines'}

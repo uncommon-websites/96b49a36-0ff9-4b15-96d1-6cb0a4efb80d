@@ -1,4 +1,6 @@
 <script lang="ts">
+  import { scrollFade } from '$lib/actions/scrollFade';
+
   const stats = [
     {
       label: "2,000+ Properties",
@@ -26,17 +28,26 @@
 <section class="py-32 px-6 md:px-16 lg:px-24 bg-white border-t border-gray-100">
   <div class="max-w-7xl mx-auto">
     <div class="mb-24">
-      <h2 class="text-4xl md:text-6xl font-medium leading-tight mb-8">
+      <h2 
+        use:scrollFade={{ delay: 0, duration: 800 }}
+        class="text-4xl md:text-6xl font-medium leading-tight mb-8"
+      >
         By the numbers
       </h2>
-      <p class="text-xl text-gray-500 max-w-2xl">
+      <p 
+        use:scrollFade={{ delay: 100, duration: 800 }}
+        class="text-xl text-gray-500 max-w-2xl"
+      >
         A snapshot of our scale, expertise, and the standards that drive everything we do.
       </p>
     </div>
 
     <div class="space-y-24">
-      {#each stats as stat}
-        <div class="flex flex-col md:flex-row md:items-start justify-between gap-12 border-b border-gray-100 pb-24 last:border-0 last:pb-0">
+      {#each stats as stat, i}
+        <div 
+          use:scrollFade={{ delay: i * 100, duration: 800 }}
+          class="flex flex-col md:flex-row md:items-start justify-between gap-12 border-b border-gray-100 pb-24 last:border-0 last:pb-0"
+        >
           <h3 class="text-3xl md:text-5xl font-medium w-full md:w-2/5 leading-tight">{stat.label}</h3>
           <div class="w-full md:w-2/5">
              <p class="text-base leading-relaxed text-gray-600">{stat.desc}</p>
